@@ -1,0 +1,6 @@
+{
+  "name": "AquaBloom",
+  "description": "AquaBloom is an enterprise bottle-advertising marketplace connecting advertisers, hosting venues, suppliers, and logistics partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

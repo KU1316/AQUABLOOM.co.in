@@ -1,0 +1,53 @@
+{
+  "name": "aquabloom",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "lint": "tsc --noEmit",
+    "test": "tsx tests/productCatalog.test.ts && tsx tests/campaignEngine.test.ts && tsx tests/agreementFoundation.test.ts && tsx tests/agreementReview.test.ts && tsx tests/agreementLocking.test.ts && tsx tests/agreementHardeningAudit.test.ts && tsx tests/orderReadiness.test.ts && tsx tests/supplierAssignment.test.ts",
+    "test:campaign": "tsx tests/campaignEngine.test.ts",
+    "test:catalog": "tsx tests/productCatalog.test.ts",
+    "test:agreement": "tsx tests/agreementFoundation.test.ts",
+    "test:review": "tsx tests/agreementReview.test.ts",
+    "test:locking": "tsx tests/agreementLocking.test.ts",
+    "test:hardening": "tsx tests/agreementHardeningAudit.test.ts",
+    "test:readiness": "tsx tests/orderReadiness.test.ts",
+    "test:supplier": "tsx tests/supplierAssignment.test.ts",
+    "test:pricing-snapshot": "tsx tests/orderPricingSnapshot.test.ts",
+    "test:review-handoff": "tsx tests/orderReviewHandoff.test.ts",
+    "test:payment-initiation": "tsx tests/orderPaymentInitiation.test.ts",
+    "test:payment-verification": "tsx tests/orderPaymentVerification.test.ts",
+    "test:payment-webhooks": "tsx tests/orderPaymentWebhooks.test.ts",
+    "test:financial-ledger": "tsx tests/financialLedger.test.ts",
+    "test:fulfillment-auth": "tsx tests/fulfillmentAuthorization.test.ts",
+    "test:advertiser-payment": "tsx tests/advertiserPaymentFinancialVisibility.test.ts",
+    "test:supplier-terminal": "tsx tests/supplierOperationalTerminal.test.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0",
+    "express": "^4.21.2",
+    "dotenv": "^17.2.3",
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "@types/express": "^4.17.21"
+  }
+}
